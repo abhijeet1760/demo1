@@ -1,0 +1,22 @@
+/// <reference types="cypress" />
+
+describe('getstudentdetails', () => {
+
+    it("get a student", () => {
+        cy.visit('http://localhost:8080/sms/Student.html');
+        
+        cy.get('#Student_ID').type('104');
+        cy.get('#First_Name').type('Omkar');
+        cy.get('#Lastname').type('Lodhe');
+        cy.get('#Gender').type('Male');
+        cy.get('#Phone_No').type('8830938991');
+        cy.get('#Date_of_Birth').type('1999-10-21');
+        cy.get('#Email_address').type('omkarlodhe@gmail.com');
+        cy.get('#Address').type('at-chandrapur,Maharashtra,441223');
+        cy.get('#year_of_addmission').type('2022');
+        cy.get('#Course').type('CS')
+        cy.get('#status').type('Active');
+        cy.get('[onclick="getstudent()"]').click();
+  
+    })
+})
